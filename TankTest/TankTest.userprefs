@@ -1,0 +1,26 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\JS\AI1.js">
+    <Files>
+      <File FileName="Assets\JS\AI1.js" Line="6" Column="1" />
+      <File FileName="Assets\JS\EnemyTankAI1.js" Line="178" Column="41" />
+      <File FileName="Assets\JS\BatteryCtrl.js" Line="5" Column="13" />
+      <File FileName="Assets\JS\TankCtrl.js" Line="89" Column="29" />
+      <File FileName="Assets\JS\projectileCtrl.js" Line="1" Column="1" />
+      <File FileName="Assets\JS\EnemyFactory.js" Line="36" Column="40" />
+      <File FileName="Assets\JS\AI.js" Line="8" Column="32" />
+      <File FileName="Assets\JS\ExplosionCtrl.js" Line="1" Column="1" />
+      <File FileName="Assets\JS\EnemyTankAI2.js" Line="178" Column="41" />
+      <File FileName="Assets\JS\AI1.js" Line="153" Column="41" />
+      <File FileName="Assets\JS\Camera.js" Line="1" Column="1" />
+      <File FileName="Assets\JS\EnemyTankAI.js" Line="1" Column="1" />
+      <File FileName="Assets\JS\EnemyTankCtrl.js" Line="1" Column="1" />
+      <File FileName="Assets\JS\GameState.js" Line="1" Column="1" />
+      <File FileName="Assets\JS\NavAgent.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
