@@ -5,6 +5,7 @@ var bullet: Rigidbody;
 var fireTarget : Transform;//定义攻击目标
 var explosionDir:GameObject;
 var explosionPerfab:GameObject;
+//var shotPerfab:GameObject;
 var shootSound:AudioClip;
 var attackRange:float = 5.0; //定义攻击范围
 var moveSpeed:float=5.0f; //移动速度
@@ -152,6 +153,7 @@ function OnTriggerEnter(Other:Collider){
 	
 	if(Other.transform.tag=="HeroProjectile"){
 		times++;
+		//Instantiate(shotPerfab,Other.transform.position,explosionDir.transform.rotation);
 		if(times==collisionCnt){
 			myStatus=2;//dead
 			

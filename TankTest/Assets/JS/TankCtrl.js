@@ -26,9 +26,14 @@ function Start () {
 
 function Update () {
 
+	if(Application.platform == RuntimePlatform.Android &&(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Home))){
+		
+		Application.LoadLevel("GameList");
+	}
+
 	if(myStatus==2){
 		//yield WaitForSeconds(1.0f);
-		Application.Quit();
+		//Application.Quit();
 	}else{
 		userCtrl();
 	}
@@ -38,11 +43,11 @@ function Update () {
 function userCtrl(){
 	transform.Translate(Vector3.forward*Input.GetAxis("Vertical")*moveSpeed);
 	transform.Translate(Vector3.right*Input.GetAxis("Horizontal")*moveSpeed);
-	transform.Translate(Vector3.right*Input.acceleration.x*moveSpeed);
-	transform.Translate(Vector3.forward	*Input.acceleration.y*moveSpeed);
+	transform.Translate(Vector3.right*Input.acceleration.x*moveSpeed*2);
+	transform.Translate(Vector3.forward	*Input.acceleration.y*moveSpeed*2);
 	
-	var tiltAroundX = Input.GetAxis("Horizontal") * tiltAngle;
-	var tiltAroundY = Input.GetAxis("Vertical") * tiltAngle;
+	var tiltAroundX = (Input.GetAxis("Horizontal") +Input.acceleration.y)* tiltAngle;
+	var tiltAroundY = (Input.GetAxis("Vertical") +Input.acceleration.x)* tiltAngle;
 	if(tiltAroundX>0&&tiltAroundY>0){
 		bodyDeg=45;
 	}else if(tiltAroundX>0&&tiltAroundY<0){
@@ -84,7 +89,7 @@ function userCtrl(){
 			
 	if(Input.GetMouseButtonDown(0)){
 		AudioSource.PlayClipAtPoint(shootSound,new Vector3(0,0,-10));
-		transform.Find("PaoTai").Find("QTank").animation.PlayQueued("QFire");
+		transform.Find("PaoTai").Find("QTank").animation.CrossFade("QFire");
 		//luncherPoint.rotation.w=0;
 		var myProjectile:Rigidbody=Instantiate(projectile,luncherPoint.position,luncherPoint.rotation);
 		var myVector3:Vector3=new Vector3(signX*2,0.0f,signY*Mathf.Tan(Mathf.Deg2Rad*rotationZ)*2);
@@ -101,12 +106,25 @@ function OnTriggerEnter(Other:Collider){
 		times++;
 		Debug.Log("times"+times);
 		if(times==collisionCnt){
-			myStatus=2;//dead
 			
+			myStatus=2;
 			StartCoroutine(DestroyTank(1.3f));
 			
 		}
 	}
+}
+function checkGameStatus(){
+	
+	GameState.heroDead1Time();
+	if(GameState.isPlaying()){
+		transform.position=new Vector3(-9,0.5,-9);
+		myStatus=0;
+		times=0;
+	}
+	//else{
+	//	yield WaitForSeconds(2);
+	//	Application.LoadLevel("StageOver");
+	//}
 }
 
 function DestroyTank(waitTime:float){
@@ -114,5 +132,6 @@ function DestroyTank(waitTime:float){
 	explosionPosition.y=0.43f;
 	Instantiate(explosionPerfab,explosionPosition,explosionDir.transform.rotation);
 	yield WaitForSeconds(waitTime);
+	checkGameStatus();
 	//Destroy(this.gameObject);
 }

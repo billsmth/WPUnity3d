@@ -56,11 +56,24 @@
      <Compile Include="Assets\JS\EnemyTankAI2.js" />
      <Compile Include="Assets\JS\EnemyTankCtrl.js" />
      <Compile Include="Assets\JS\ExplosionCtrl.js" />
+     <Compile Include="Assets\JS\GameList\GameList.js" />
      <Compile Include="Assets\JS\GameState.js" />
      <Compile Include="Assets\JS\NavAgent.js" />
+     <Compile Include="Assets\JS\PlaneCtrl.js" />
+     <Compile Include="Assets\JS\StageCtrl.js" />
+     <Compile Include="Assets\JS\StageOver.js" />
      <Compile Include="Assets\JS\TankCtrl.js" />
      <Compile Include="Assets\JS\projectileCtrl.js" />
+     <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Surface.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D Marker.shader" />
+     <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Surface alpha.shader" />
+     <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Normal-Diffuse.shader" />
+     <None Include="Assets\EasyRoads3D Free\_readme.txt" />
+     <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Road-Edit-Mode.shader" />
+ <Reference Include="EasyRoads3D">
+ <HintPath>Assets\EasyRoads3D Free\lib\EasyRoads3D.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,22 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\JS\AI1.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\JS\StageStatusCtrl.js">
     <Files>
-      <File FileName="Assets\JS\AI1.js" Line="6" Column="1" />
-      <File FileName="Assets\JS\EnemyTankAI1.js" Line="178" Column="41" />
-      <File FileName="Assets\JS\BatteryCtrl.js" Line="5" Column="13" />
-      <File FileName="Assets\JS\TankCtrl.js" Line="89" Column="29" />
+      <File FileName="Assets\JS\TankCtrl.js" Line="119" Column="26" />
+      <File FileName="Assets\JS\GameList\GameList.js" Line="56" Column="74" />
+      <File FileName="Assets\JS\GameState.js" Line="68" Column="23" />
+      <File FileName="Assets\JS\StageOver.js" Line="1" Column="1" />
       <File FileName="Assets\JS\projectileCtrl.js" Line="1" Column="1" />
-      <File FileName="Assets\JS\EnemyFactory.js" Line="36" Column="40" />
-      <File FileName="Assets\JS\AI.js" Line="8" Column="32" />
-      <File FileName="Assets\JS\ExplosionCtrl.js" Line="1" Column="1" />
-      <File FileName="Assets\JS\EnemyTankAI2.js" Line="178" Column="41" />
-      <File FileName="Assets\JS\AI1.js" Line="153" Column="41" />
-      <File FileName="Assets\JS\Camera.js" Line="1" Column="1" />
-      <File FileName="Assets\JS\EnemyTankAI.js" Line="1" Column="1" />
-      <File FileName="Assets\JS\EnemyTankCtrl.js" Line="1" Column="1" />
-      <File FileName="Assets\JS\GameState.js" Line="1" Column="1" />
-      <File FileName="Assets\JS\NavAgent.js" Line="1" Column="1" />
+      <File FileName="Assets\JS\AI1.js" Line="34" Column="20" />
+      <File FileName="Assets\JS\StageStatusCtrl.js" Line="23" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
